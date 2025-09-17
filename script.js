@@ -5,7 +5,7 @@
         let deletelist =document.getElementById("delete")
         let completeitem = document.getElementById("complete")
 
-    //   need comment here for every section ..... remain it 
+    
 
         addbtn.addEventListener("click",() =>{
            let text = input.value.trim();
@@ -29,7 +29,7 @@
             tasklist.removeChild(li)
 
             let deleteitem = document.createElement("li")
-            deleteitem.innerText =`${text} -- delelted manual at (${new Date().toLocaleTimeString()})`
+            deleteitem.innerText =`${text} -- deleted manual at (${new Date().toLocaleTimeString()})`
             deletelist.appendChild(deleteitem)
            })
 
@@ -71,7 +71,7 @@
                     alert(`${text} is remove `)
 
                     let deleteitem = document.createElement("li")
-                    deleteitem.innerText =`${text} -- delelte auto at (${new Date().toLocaleTimeString()})`
+                    deleteitem.innerText =`${text} -- deleted auto at (${new Date().toLocaleTimeString()})`
                     deletelist.appendChild(deleteitem)
                     
                 }
