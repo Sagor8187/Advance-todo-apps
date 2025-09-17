@@ -1,0 +1,28 @@
+   body { font-family: Arial, sans-serif; margin: 20px; text-align: center;align-items: center;background-color: lightcyan; }
+            #taskinput { padding:15px;border-radius: 15px; }
+            ul { list-style: none; padding: 0; }
+            li { margin: 5px 0; padding: 8px; border: 1px solid #ccc; display: flex; justify-content:space-between; align-items: center;background-color: whitesmoke; }
+            .completed { text-decoration: line-through; color: gray; }
+        #addbtn{
+            padding: 15px;
+            border-radius: 15px;
+
+        }
+        #timervalue{ padding:15px;border-radius: 15px; width: 40px;}
+        .section{
+            display: flex;
+            flex-direction: column;
+            justify-content:space-around;
+            gap: 10px;
+            
+            
+            
+        }
+
+    @media (max-width: 600px) {
+        body {
+            background-color: lightblue;
+        }
+        #taskinput { padding:15px;border-radius: 10px; }
+        li { margin: 5px 0; padding: 5px; border: 1px solid #ccc; display: flex; justify-content:center; align-items: center;gap: 5px;background-color: whitesmoke; }
+    }
