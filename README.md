@@ -1,4 +1,6 @@
-<img width="2231" height="1272" alt="image" src="https://github.com/user-attachments/assets/3f2b4439-77a5-4d00-b238-5aaacfda4a8c" />
+
+<img width="2245" height="1254" alt="image" src="https://github.com/user-attachments/assets/2f788b43-bce9-4150-9936-48acc0a0d7c1" />
+
 📝 To-Do App with Auto Delete & Timer
 
 This is a simple To-Do Application built with HTML, CSS, and JavaScript.
