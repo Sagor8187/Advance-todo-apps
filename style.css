@@ -1,28 +1,156 @@
-   body { font-family: Arial, sans-serif; margin: 20px; text-align: center;align-items: center;background-color: lightcyan; }
-            #taskinput { padding:15px;border-radius: 15px; }
-            ul { list-style: none; padding: 0; }
-            li { margin: 5px 0; padding: 8px; border: 1px solid #ccc; display: flex; justify-content:space-between; align-items: center;background-color: whitesmoke; }
-            .completed { text-decoration: line-through; color: gray; }
-        #addbtn{
-            padding: 15px;
-            border-radius: 15px;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, Arial, sans-serif;
+}
 
-        }
-        #timervalue{ padding:15px;border-radius: 15px; width: 40px;}
-        .section{
-            display: flex;
-            flex-direction: column;
-            justify-content:space-around;
-            gap: 10px;
-            
-            
-            
-        }
+/* animated gradient background */
+body{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    @media (max-width: 600px) {
-        body {
-            background-color: lightblue;
-        }
-        #taskinput { padding:15px;border-radius: 10px; }
-        li { margin: 5px 0; padding: 5px; border: 1px solid #ccc; display: flex; justify-content:center; align-items: center;gap: 5px;background-color: whitesmoke; }
-    }
+  background: linear-gradient(130deg,#5f2c82,#49a09d,#00c6ff);
+  background-size: 400% 400%;
+  animation: gradientMove 8s infinite alternate;
+}
+
+@keyframes gradientMove{
+  0%{background-position:left}
+  100%{background-position:right}
+}
+
+/* main card */
+.container{
+  width: 480px;
+  padding: 25px;
+  border-radius: 22px;
+  background: rgba(255,255,255,.12);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 15px 35px rgba(0,0,0,.4);
+  animation: drop .7s ease;
+}
+
+@keyframes drop{
+  from{opacity:0; transform: translateY(-40px) scale(.9)}
+  to{opacity:1; transform: translateY(0) scale(1)}
+}
+
+.title{
+  text-align:center;
+  color:white;
+  margin-bottom:12px;
+}
+
+/* input styles */
+.input-field{
+  width: 100%;
+  padding: 11px 12px;
+  margin-top:5px;
+  margin-bottom:8px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+}
+
+.input-field:focus{
+  box-shadow: 0 0 15px rgba(255,255,255,.5);
+}
+
+.label{
+  color:white;
+  font-size:14px;
+}
+
+/* add button */
+.glow-button{
+  margin-top:8px;
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:12px;
+  cursor:pointer;
+  font-weight:bold;
+  color:white;
+  background:#00c6ff;
+  transition:.3s;
+}
+
+.glow-button:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 20px rgba(255,255,255,.8);
+}
+
+/* list style */
+ul{
+  list-style:none;
+  margin-top:10px;
+}
+
+/* todo item */
+ul li{
+  background: rgba(255,255,255,.18);
+  color:white;
+  padding: 10px 12px;
+  border-radius: 15px;
+  margin-top: 8px;
+
+  display: flex;
+  gap:8px;
+  justify-content: space-between;
+  align-items: center;
+
+  backdrop-filter: blur(8px);
+
+  animation: pop .3s ease;
+}
+
+@keyframes pop{
+  from{transform: scale(.8); opacity:0}
+  to{transform: scale(1); opacity:1}
+}
+
+/* text will never shrink */
+ul li span{
+  flex:1;
+  white-space: normal;
+  word-break: break-word;
+  font-size:15px;
+}
+
+/* buttons in list */
+ul li button{
+  flex-shrink:0;
+  border:none;
+  padding:6px 10px;
+  border-radius:10px;
+  cursor:pointer;
+  transition:.3s;
+}
+
+ul li button:hover{
+  transform:scale(1.2);
+}
+
+/* glass box section */
+.glass-box{
+  margin-top:15px;
+  padding:12px;
+  border-radius:15px;
+  background:rgba(255,255,255,.1);
+  border:1px dashed white;
+}
+
+.complete-title{color:#00ff95}
+.delete-title{color:#ff6b6b}
+
+/* special colors */
+#complete li{
+  background:rgba(0,255,0,.15);
+}
+
+#delete li{
+  background:rgba(255,0,0,.15);
+}
